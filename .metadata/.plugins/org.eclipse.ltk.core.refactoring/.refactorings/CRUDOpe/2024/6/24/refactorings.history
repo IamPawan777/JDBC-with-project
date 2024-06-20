@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename package &apos;InsertQuery&apos; to &apos;CRUDop&apos;&#x0D;&#x0A;- Original project: &apos;CRUDOpe&apos;&#x0D;&#x0A;- Original element: &apos;CRUDOpe/src/InsertQuery&apos;&#x0D;&#x0A;- Renamed element: &apos;CRUDOpe/src/CRUDop&apos;&#x0D;&#x0A;- Update references to refactored element&#x0D;&#x0A;- Update textual occurrences in comments and strings" description="Rename package &apos;InsertQuery&apos;" flags="589830" hierarchical="false" id="org.eclipse.jdt.ui.rename.package" input="/src&lt;InsertQuery" name="CRUDop" qualified="false" references="true" stamp="1718073225917" textual="false" version="1.0"/>
+</session>

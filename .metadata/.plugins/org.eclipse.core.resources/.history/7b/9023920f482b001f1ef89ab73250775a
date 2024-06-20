@@ -1,0 +1,59 @@
+package CRUDop;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.SQLException;
+import java.util.Scanner;
+
+public class NewCRUD {
+
+	public static void main(String[] args) {
+		
+		String url = "jdbc:mysql://localhost:3306/pw_jdbc";
+		String user = "root";
+		String password = "IamPawan";
+		Connection con = null;
+//		String query = "insert into newCRUD(name) values (?)";
+//		String query = "delete from newcrud where id = ?";
+		String query = "update newcrud set name = ? where id = ?";
+		PreparedStatement pstmt = null;
+		Scanner sc = new Scanner(System.in);
+		
+		try {
+//			Class.forName("com.mysql.cj.jdbc.Driver");				// this line is optional...||...now this line is deprecated -> com.mysql.jdbc.Driver
+			con = DriverManager.getConnection(url, user, password);
+			pstmt = con.prepareStatement(query);
+			
+			System.out.println("Enter id: ");
+			int i = sc.nextInt();
+			
+			System.out.println("Enter name: ");
+			String n = sc.next();
+			
+			pstmt.setInt(2, i);
+			pstmt.setString(1, n);
+			
+			int roweffected = pstmt.executeUpdate();
+			
+			if(roweffected > 0) 
+				System.out.println("Successfully......");
+			else
+				System.out.println("Not Successfully......");
+			
+		}  catch (SQLException e) {
+			e.printStackTrace();
+		} 
+		
+		finally {
+			try {
+				con.close();
+				pstmt.close();
+				sc.close();
+			} catch (SQLException e) {
+				e.printStackTrace();
+			}
+		}
+	}
+
+}
