@@ -22,7 +22,7 @@ public class imagefile {
 		try {
 			con = JDBCUtil.getJdbcConnection();
 			
-			System.out.println("1 for upload image. 2 for get image.");
+			System.out.println("press:1 for upload image on database. press:2 for get image on folder.");
 			int val = sc.nextInt();
 			
 			switch(val) {
