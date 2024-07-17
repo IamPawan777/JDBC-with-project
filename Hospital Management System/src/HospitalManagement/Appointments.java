@@ -27,8 +27,8 @@ public class Appointments {
 			while(true) {
 				System.out.println("..HOSPITAL MANAGEMENT SYSTEM..");
 				System.out.println("1. Add Patient");
-				System.out.println("2. View Patient");
-				System.out.println("3. View Patient");
+				System.out.println("2. View Patients");
+				System.out.println("3. View doctors");
 				System.out.println("4. Book Appointment");
 				System.out.println("5. Exit");
 				
